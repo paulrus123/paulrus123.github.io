@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MagicPutt</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+				<header id="header" class="alt style2">
+					<a href="index.html" class="logo"><strong>Paul Sorenson</strong> <span>Portfolio</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="zenuity_avp.html">Zenuity Autonomous Parking</a></li>
+						<li><a href="ar_sensor_visualization.html">AR Sensor Visualization</a></li>
+						<li><a href="magicPutt.html">MagicPutt</a></li>
+						<li><a href="cloudAnchors_beerPong.html">Cloud Anchors Beer Pong</a></li>
+					</ul>
+				</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1>Cloud Anchors Beer Pong</h1>
+							</header>
+							<div class="content">
+								<p>A shared experience using Google's 
+									<a href="https://developers.google.com/ar/develop/java/cloud-anchors/overview-android">Cloud Anchors</a>	
+									<br/><br/><a href="https://github.com/paulrus123/CloudAnchorsBeerPong">Github Link</a>
+								</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>Background</h2>
+									</header>
+									<p>This project is a follow up of the MagicPutt shared AR experience. In MagicPutt, world localization is achieved through a fiducial (tracked image). In this project I wanted to try Google's CloudAnchor
+										technology, which can localize a physical spaced based on a cloud hosted "anchor". I host a cloud anchor from a mobile device, and can access that same anchor on a second phone. 
+										Then I use a similar MQTT messaging strategy to create a multiplayer user experience.
+									</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<iframe 
+									src="https://www.youtube.com/embed/ZWhfya1OqfM"
+									alt="" data-position="top center"
+									allowfullscreen="allowfullscreen"
+									mozallowfullscreen="mozallowfullscreen" 
+									msallowfullscreen="msallowfullscreen" 
+									oallowfullscreen="oallowfullscreen" 
+									webkitallowfullscreen="webkitallowfullscreen">
+									</iframe>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Syncing experience</h3>
+											</header>
+											<p>Please see the video for an example of how a cloud anchor is hosted and resolved. Each hosted cloud anchor uses a generated ID that other devices can resolve. 
+										
+													Synchronization is occured using MQTT for fast messaging. This is configurable to use a public broker or for better performance a locally hosted broker. Future plans include to replace
+													this with a hosted server that can connect multiple clients via a local connection over WiFi for best performance. 
+			
+													Even with the slowest (public broker) messaging option, I was able to use a few tricks to make the ball movement seem fluid on both the host and client devices.
+												</p>
+										</div>
+									</div>
+								</section>
+								
+							</section>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/paul.sorenson.9" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/paulrus123" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/paulsorenson891/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
