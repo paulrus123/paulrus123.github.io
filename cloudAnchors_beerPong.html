@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>MagicPutt</title>
+		<title>Cloud Anchors Beer Pong</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -73,7 +73,7 @@
 
 									<p>
 										
-										This project is a follow up of the MagicPutt shared AR experience. In MagicPutt, world localization is achieved through a fiducial (tracked image). In this project I wanted to try Google's CloudAnchor
+										This project is a follow up of the MagicPutt shared AR experience. In MagicPutt, world localization is achieved through a fiducial (tracked image). In this project I used Google's CloudAnchor
 										technology, which can localize a physical spaced based on a cloud hosted "anchor". I host a cloud anchor from a mobile device, and can access that same anchor on a second phone. 
 										Then I use a similar MQTT messaging strategy to create a multiplayer user experience.
 
@@ -88,6 +88,32 @@
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
+							<section>	
+									<img src="images/MainMenu2.png" width="200" height="400"/>
+									<!-- <iframe 
+									src="images/MainMenu2.png"
+									alt="" data-position="top center"
+									allowfullscreen="allowfullscreen"
+									mozallowfullscreen="mozallowfullscreen" 
+									msallowfullscreen="msallowfullscreen" 
+									oallowfullscreen="oallowfullscreen" 
+									webkitallowfullscreen="webkitallowfullscreen">
+									</iframe> -->
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Interactions</h3>
+											</header>
+											<p>Please see the figma link to UI designs. I tried to put thought into making an easily understandable AR experience - especially with
+												setting up the play area. The user has to be able to understand how to track a surface, place an augmented object via an anchor, or resolve
+												the anchor on a different device. Once the table is placed, also making easily understandable gameplay mechanics was considered.
+
+											</p>
+											<a href="https://www.figma.com/file/NU9czSv8m4ApmWVYA24MZv/CABP?node-id=0%3A1">Figma Link</a> 
+										</div>
+									</div>
+								</section>
+
 								<section>
 									<iframe 
 									src="https://www.youtube.com/embed/rLtmKATDBZc" 
@@ -113,6 +139,29 @@
 										</div>
 									</div>
 								</section>
+
+								<section>
+										<iframe 
+										src="https://www.youtube.com/embed/hjD8o0A9X6Y" 
+										alt="" data-position="top center"
+										allowfullscreen="allowfullscreen"
+										mozallowfullscreen="mozallowfullscreen" 
+										msallowfullscreen="msallowfullscreen" 
+										oallowfullscreen="oallowfullscreen" 
+										webkitallowfullscreen="webkitallowfullscreen">
+										</iframe>
+										<div class="content">
+											<div class="inner">
+												<header class="major">
+													<h3>Multiplayer</h3>
+												</header>
+												<p>Part of this project tried to get "real-time" feeling multiplayer interactions. The goal (still in progress!) is for the defending player to 
+													be able to "block" the ball after the player shoots it. Watching the two screens it's apparent that there is still a small delay between host and 
+													client devices, however using some different intent tricks that delay can be effectively eliminated. Stay tuned for updates!
+												</p>
+											</div>
+										</div>
+									</section>
 								
 								<section>
 									<iframe 
@@ -154,7 +203,6 @@
 						</ul>
 					</div>
 				</footer>
-
 			</div>
 
 		<!-- Scripts -->
@@ -165,6 +213,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
