@@ -30,10 +30,13 @@
 				<nav id="menu">
 					<ul class="links">
 						<li><a href="index.html">Home</a></li>
+						<li><a href="assets/resume.pdf">Resume</a></li>
+						<li><a href="https://medium.com/@paulsorenson_94349">Dev Blog</a></li>
+						<li><a href="cloudAnchors_beerPong.html">Cloud Anchors Beer Pong</a></li>
 						<li><a href="zenuity_avp.html">Zenuity Autonomous Parking</a></li>
 						<li><a href="ar_sensor_visualization.html">AR Sensor Visualization</a></li>
 						<li><a href="magicPutt.html">MagicPutt</a></li>
-						<li><a href="cloudAnchors_beerPong.html">Cloud Anchors Beer Pong</a></li>
+						<li><a href="https://devpost.com/software/cosmovr">CosmosVR</a></li>
 					</ul>
 				</nav>
 
@@ -48,7 +51,7 @@
 								<h1>MagicPutt</h1>
 							</header>
 							<div class="content">
-								<p>An asymetrical shared AR experience running on a MagicLeap Headset and a mobile phone.</p>
+								<p>An asymmetrical shared AR experience running on a MagicLeap Headset and a mobile phone.</p>
 							</div>
 						</div>
 					</section>
@@ -62,9 +65,8 @@
 									<header class="major">
 										<h2>Background</h2>
 									</header>
-									<p>One of the unique features of AR that personally interests me is the ability to share an  augmented experience in the same state. When I first got access to a MagicLeap headset I was excited to create and show off content! 
-										However I realized it's hard to experience a MagicLeap experience if you are not the one wearing the headset. I also assumed based on current price that not many users will have access to multiple headsets. 
-										Instead, using a phone (which most have access to) I tried to create a secondary experience in the same application. I tried to create an assymetrical but still interactive and engaging experience for both the phone and the headset user.</p>
+									<p>MagicPutt is a POC of an asymmetrical shared AR experience between a headset (MagicLeap 1) and a phone user. The game is a puzzle + minigolf experience. The headset user has to try and finish each hole but will need help from the phone user to clear the course.
+									</p>
 								</div>
 							</section>
 
@@ -85,8 +87,8 @@
 											<header class="major">
 												<h3>Syncing experience</h3>
 											</header>
-											<p>I used a shared fiducial (a physical picture on a piece of paper) to localize the phone and headset to the same worldspace. 
-												I then used an MQTT messaging solution to send and recieve events like ball and club poses. <br/><br/><br/></p>
+											<p>Localization is accomplished with tracked fiducial image to anchor the phone and headset to the same worldspace. 
+												A peer to peer MQTT connection was implemented to send and recieve events like ball and club poses. <br/><br/><br/></p>
 										</div>
 									</div>
 								</section>
@@ -133,7 +135,7 @@
 												<h3>Interactions</h3>
 											</header>
 											<p>
-												One of the first interactions I created was a simple ramp that the user could pick up and place. The idea is to collaborate with the golfer to reach the hole in the lowest number of putts.
+												One of the first interactions created was a simple ramp that the user could pick up and place. The idea is to collaborate with the golfer to reach the hole in the lowest number of putts.
 												<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 											</p>
 										</div>
@@ -146,7 +148,6 @@
 				<footer id="footer">
 					<div class="inner">
 						<ul class="icons">
-							<li><a href="https://www.facebook.com/paul.sorenson.9" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="https://github.com/paulrus123" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 							<li><a href="https://www.linkedin.com/in/paulsorenson891/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 						</ul>
