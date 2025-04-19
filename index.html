@@ -5,8 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Paul Sorenson's professional portfolio website">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css?v=1.1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -115,6 +118,20 @@
     
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Force reload if coming from cache and older than 1 hour
+        if (performance.navigation.type === 2) {
+            const lastVisit = sessionStorage.getItem('lastVisit');
+            const now = new Date().getTime();
+            if (!lastVisit || now - lastVisit > 3600000) {
+                sessionStorage.setItem('lastVisit', now);
+                location.reload(true);
+            } else {
+                sessionStorage.setItem('lastVisit', now);
+            }
+        } else {
+            sessionStorage.setItem('lastVisit', new Date().getTime());
+        }
         
         // Modal functionality
         const xrModal = document.getElementById('xrModal');
