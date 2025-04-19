@@ -99,13 +99,16 @@ header {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .back-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 1rem;
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-align: left;
 }
 
 .back-link a {
@@ -475,6 +478,14 @@ p {
     
     .links {
         grid-template-columns: 1fr;
+    }
+    
+    header {
+        margin-bottom: 2rem;
+    }
+    
+    .back-link {
+        margin-bottom: 1.2rem;
     }
 }
 
