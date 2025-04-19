@@ -1,20 +1,186 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-    <title>Paul Sorenson</title>
+    <title>Paul Sorenson | Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Paul Sorenson's professional portfolio website">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="is-preload">
-    <main>
-		<h2>Paul Sorenson</h2>
-        <ul>
-            <li><a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-            <li><a href="https://hootcycle.com" target="_blank" rel="noopener noreferrer">Hootcycle</a></li>
-            <li><a href="https://github.com/paulrus123" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://medium.com/@paulsorenson_94349" target="_blank" rel="noopener noreferrer">Dev Blog</a></li>
-        </ul>
-    </main>
+<body>
+    <div class="background">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>Paul Sorenson</h1>
+            <p class="subtitle">Software Engineering Manager</p>
+        </header>
+        
+        <main>
+            <section class="about">
+                <p>Engineering leader with a strong foundation in mobile, web, and cross-platform software development.</p>
+            </section>
+            
+            <section class="links">
+                <button class="link-card resume-button" id="resumeButton">
+                    <div class="link-icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <div class="link-text">Resume</div>
+                </button>
+                
+                <button class="link-card xr-button" id="xrButton">
+                    <div class="link-icon"><i class="fa-solid fa-code-branch"></i></div>
+                    <div class="link-text">Projects</div>
+                </button>
+                
+                <a href="https://github.com/paulrus123" class="link-card" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon"><i class="fa-brands fa-github"></i></div>
+                    <div class="link-text">GitHub</div>
+                </a>
+                
+                <a href="https://medium.com/@paulsorenson_94349" class="link-card" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon"><i class="fa-brands fa-medium"></i></div>
+                    <div class="link-text">Dev Blog</div>
+                </a>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; <span id="year"></span> Paul Sorenson</p>
+        </footer>
+    </div>
+    
+    <!-- Projects Modal -->
+    <div id="xrModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Projects</h2>
+                <span class="close-modal" data-modal="xr">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="modal-intro">Here are some of my personal projects</p>
+                
+                <a href="xr/hootcycle.html" class="link-card">
+                    <div class="link-icon"><i class="fa-solid fa-bicycle"></i></div>
+                    <div class="link-text">Hootcycle</div>
+                </a>
+                
+                <a href="xr/cloudAnchors_beerPong.html" class="link-card">
+                    <div class="link-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <div class="link-text">Cloud Anchors Beer Pong</div>
+                </a>
+                
+                <a href="xr/magicPutt.html" class="link-card">
+                    <div class="link-icon"><i class="fa-solid fa-golf-ball-tee"></i></div>
+                    <div class="link-text">Magic Putt</div>
+                </a>
+                
+                <a href="xr/ar_sensor_visualization.html" class="link-card">
+                    <div class="link-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                    <div class="link-text">AR Sensor Visualization</div>
+                </a>
+                
+                <a href="xr/zenuity_avp.html" class="link-card">
+                    <div class="link-icon"><i class="fa-solid fa-car"></i></div>
+                    <div class="link-text">Zenuity AVP</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content resume-modal">
+            <div class="modal-header">
+                <h2>Resume</h2>
+                <div class="resume-actions">
+                    <a href="assets/sorenson_paul_resume.pdf" class="cta-button" download>Download PDF</a>
+                    <a href="assets/sorenson_paul_resume.pdf" class="cta-button" target="_blank">Open in New Tab</a>
+                </div>
+                <span class="close-modal" data-modal="resume">&times;</span>
+            </div>
+            <div class="modal-body resume-content">
+                <iframe src="assets/sorenson_paul_resume.pdf#toolbar=0&navpanes=0&statusbar=0&view=FitH" width="100%" height="75vh"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Modal functionality
+        const xrModal = document.getElementById('xrModal');
+        const xrBtn = document.getElementById('xrButton');
+        const xrClose = xrModal.querySelector('.close-modal');
+        
+        const resumeModal = document.getElementById('resumeModal');
+        const resumeBtn = document.getElementById('resumeButton');
+        const resumeClose = resumeModal.querySelector('.close-modal');
+        
+        // Check for hash parameter on page load
+        function checkHash() {
+            if (window.location.hash === '#projects') {
+                xrModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else if (window.location.hash === '#resume') {
+                resumeModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Run on page load
+        window.addEventListener('load', checkHash);
+        
+        // Also run when hash changes (for browser back/forward buttons)
+        window.addEventListener('hashchange', checkHash);
+        
+        // XR modal
+        xrBtn.onclick = function() {
+            xrModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            window.location.hash = 'projects';
+        }
+        
+        xrClose.onclick = function() {
+            xrModal.classList.remove('show');
+            document.body.style.overflow = '';
+            window.location.hash = '';
+        }
+        
+        // Resume modal
+        resumeBtn.onclick = function() {
+            resumeModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            window.location.hash = 'resume';
+        }
+        
+        resumeClose.onclick = function() {
+            resumeModal.classList.remove('show');
+            document.body.style.overflow = '';
+            window.location.hash = '';
+        }
+        
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            if (event.target == xrModal) {
+                xrModal.classList.remove('show');
+                document.body.style.overflow = '';
+                window.location.hash = '';
+            }
+            if (event.target == resumeModal) {
+                resumeModal.classList.remove('show');
+                document.body.style.overflow = '';
+                window.location.hash = '';
+            }
+        }
+    </script>
 </body>
 </html>

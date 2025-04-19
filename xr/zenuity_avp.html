@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Zenuity AVP | Paul Sorenson</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Zenuity Autonomous Vehicle Parking - An AR visualization project by Paul Sorenson">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/xr.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="back-link">
+                <a href="../index.html#projects">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+            <h1>Zenuity AVP</h1>
+            <p class="subtitle">Autonomous Vehicle Parking</p>
+        </header>
+        
+        <main>
+            <section class="project-overview">
+                <h2>Overview</h2>
+                <p>At Zenuity, I wrote the infotainment software for interacting with the vehicle's autonomous vehicle parking technology. I also contributed to the driver monitoring system, which tracks the driver's eyes and head to determine if they are looking at the road. </p>
+                <p>My team demo'd our automated valet parking system at the 2021 Consumer Electronics Show in Las Vegas. I was lucky enough to be in attendance and was actually the pedestrian in this video!</p>
+            </section>
+            
+            <section class="project-media">
+                <h2>Demo</h2>
+                <div class="media-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/SSzC5nJwNn8"
+                        allowfullscreen="allowfullscreen"
+                        mozallowfullscreen="mozallowfullscreen" 
+                        msallowfullscreen="msallowfullscreen" 
+                        oallowfullscreen="oallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen">
+                    </iframe>
+                </div>
+            </section>
+            
+            <section class="project-details">
+                <h2>Details</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h3>Technologies</h3>
+                        <p>Unity, C++</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Role</h3>
+                        <p>Software engineer.</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Year</h3>
+                        <p>2020</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="other-projects">
+                <h3>Other Projects</h3>
+                <div class="links">
+                    <a href="hootcycle.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-bicycle"></i></div>
+                        <div class="link-text">Hootcycle</div>
+                    </a>
+                    
+                    <a href="magicPutt.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-golf-ball-tee"></i></div>
+                        <div class="link-text">Magic Putt</div>
+                    </a>
+                    
+                    <a href="cloudAnchors_beerPong.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="link-text">Cloud Anchors Beer Pong</div>
+                    </a>
+                    
+                    <a href="ar_sensor_visualization.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                        <div class="link-text">AR Sensor Visualization</div>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&copy; <span id="year"></span> Paul Sorenson</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

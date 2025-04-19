@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Cloud Anchors Beer Pong | Paul Sorenson</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cloud Anchors Beer Pong - A multiplayer AR experiment by Paul Sorenson">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/xr.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="back-link">
+                <a href="../index.html#projects">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+            <h1>Cloud Anchors Beer Pong</h1>
+            <p class="subtitle">A multiplayer AR experiment with Google Cloud Anchors</p>
+        </header>
+        
+        <main>
+            <section class="project-overview">
+                <h2>Overview</h2>
+                <p>This AR experiment was created to test the fidelity and capabilities of Google Cloud Anchors. I developed a beer pong game to demonstrate the technology - allowing two users to place a virtual table in their shared space and play a game remotely using AR.</p>
+            </section>
+            
+            <section class="project-media">
+                <h2>Demo</h2>
+                <div class="media-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/hjD8o0A9X6Y"
+                        allowfullscreen="allowfullscreen"
+                        mozallowfullscreen="mozallowfullscreen" 
+                        msallowfullscreen="msallowfullscreen" 
+                        oallowfullscreen="oallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen">
+                    </iframe>
+                </div>
+            </section>
+            
+            <section class="project-details">
+                <h2>Details</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h3>Technologies</h3>
+                        <p>ARCore, Unity, Google Cloud Anchors, Netcode for GameObjects</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Role</h3>
+                        <p>Solo Developer</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Year</h3>
+                        <p>2019</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="project-content">
+                <h2>Concept</h2>
+                <p>Google Cloud Anchors allows developers to create a persistent place marker in AR that can be accessed by multiple users. This enables shared experiences where users can place virtual objects in the real world that remain in the same location for anyone using the app.</p>
+                
+                <p>I chose beer pong as a fun way to demonstrate this technology, creating a multiplayer game where each player could take turns throwing balls at cups on a shared virtual table, regardless of their physical location.</p>
+                
+                <h2>Development Challenges</h2>
+                <p>Working with Cloud Anchors presented several challenges:</p>
+                <ul>
+                    <li>Anchor stability between different devices and environments</li>
+                    <li>Networking synchronization for real-time gameplay</li>
+                    <li>Creating intuitive throwing mechanics in AR</li>
+                    <li>Optimizing physics for realistic ball behavior</li>
+                </ul>
+                
+                <h2>User Experience</h2>
+                <p>One of the key challenges was creating a smooth user experience for placing the anchor and finding it again. I implemented a guided setup process that helps users scan their environment properly to create stable anchors and provides visual feedback during connection.</p>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="other-projects">
+                <h3>Other Projects</h3>
+                <div class="links">
+                    <a href="hootcycle.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-bicycle"></i></div>
+                        <div class="link-text">Hootcycle</div>
+                    </a>
+                    
+                    <a href="magicPutt.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-golf-ball-tee"></i></div>
+                        <div class="link-text">Magic Putt</div>
+                    </a>
+                    
+                    <a href="ar_sensor_visualization.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                        <div class="link-text">AR Sensor Visualization</div>
+                    </a>
+                    
+                    <a href="zenuity_avp.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-car"></i></div>
+                        <div class="link-text">Zenuity AVP</div>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&copy; <span id="year"></span> Paul Sorenson</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

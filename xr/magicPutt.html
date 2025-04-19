@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Magic Putt | Paul Sorenson</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Magic Putt - An asymmetrical shared AR experience by Paul Sorenson">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/xr.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="back-link">
+                <a href="../index.html#projects">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+            <h1>Magic Putt</h1>
+            <p class="subtitle">An asymmetrical shared AR experience running on a MagicLeap Headset and a mobile phone.</p>
+        </header>
+        
+        <main>
+            <section class="project-overview">
+                <h2>Overview</h2>
+                <p>MagicPutt is a proof of concept demonstrating an asymmetrical shared AR experience between a headset (MagicLeap 1) and a phone user. The game is a puzzle + minigolf experience where the headset user has to try and finish each hole but will need help from the phone user to clear the course.</p>
+				<p>I wanted to explore the idea of sharing augmented digital experiences across device boundaries as even today the headmounted device market is still small and not widely available.</p>
+            </section>
+            
+            <section class="project-media">
+                <h2>Demo</h2>
+                <div class="media-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/ZWhfya1OqfM"
+                        allowfullscreen="allowfullscreen"
+                        mozallowfullscreen="mozallowfullscreen" 
+                        msallowfullscreen="msallowfullscreen" 
+                        oallowfullscreen="oallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen">
+                    </iframe>
+                </div>
+            </section>
+            
+            <section class="project-details">
+                <h2>Details</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h3>Technologies</h3>
+                        <p>MagicLeap, Unity, MQTT, AR Foundation</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Role</h3>
+                        <p>Developer, Designer</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Year</h3>
+                        <p>2020</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="project-content">
+                <h2>Syncing Experience</h2>
+                <p>Localization is accomplished with tracked fiducial image to anchor the phone and headset to the same worldspace. A peer to peer MQTT connection was implemented to send and receive events like ball and club poses.</p>
+                
+                <div class="media-container">
+                    <iframe 
+                        src='https://gfycat.com/ifr/FormalParallelArabianoryx'
+                        allowfullscreen="allowfullscreen"
+                        mozallowfullscreen="mozallowfullscreen" 
+                        msallowfullscreen="msallowfullscreen" 
+                        oallowfullscreen="oallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen">
+                    </iframe>
+                </div>
+                
+                <h2>User Experience</h2>
+                <p>One of my goals on this project was to create a user friendly AR experience. For a user unaccustomed to how Augmented Reality works, it could be difficult to discern what to do to get a good experience (find the fiducial, observe AR content, etc).</p>
+                
+                <div class="media-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/KjeXh_gdHHM"
+                        allowfullscreen="allowfullscreen"
+                        mozallowfullscreen="mozallowfullscreen" 
+                        msallowfullscreen="msallowfullscreen" 
+                        oallowfullscreen="oallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen">
+                    </iframe>
+                </div>
+                
+                <h2>Interactions</h2>
+                <p>One of the first interactions created was a simple ramp that the user could pick up and place. The idea is to collaborate with the golfer to reach the hole in the lowest number of putts.</p>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="other-projects">
+                <h3>Other Projects</h3>
+                <div class="links">
+                    <a href="hootcycle.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-bicycle"></i></div>
+                        <div class="link-text">Hootcycle</div>
+                    </a>
+                    
+                    <a href="cloudAnchors_beerPong.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="link-text">Cloud Anchors Beer Pong</div>
+                    </a>
+                    
+                    <a href="ar_sensor_visualization.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                        <div class="link-text">AR Sensor Visualization</div>
+                    </a>
+                    
+                    <a href="zenuity_avp.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-car"></i></div>
+                        <div class="link-text">Zenuity AVP</div>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&copy; <span id="year"></span> Paul Sorenson</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

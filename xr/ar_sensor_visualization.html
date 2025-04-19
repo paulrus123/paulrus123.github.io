@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>AR Sensor Visualization | Paul Sorenson</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AR Sensor Visualization - An augmented reality application for visualizing vehicle sensor data">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/xr.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="back-link">
+                <a href="../index.html#projects">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+            <h1>AR Sensor Visualization</h1>
+            <p class="subtitle">Visualizing vehicle sensor data in augmented reality</p>
+        </header>
+        
+        <main>
+            <section class="project-overview">
+                <h2>Overview</h2>
+                <p>This project was developed as a proof of concept to provide an immersive visualization of vehicle sensor data in augmented reality. By placing a virtual vehicle model in the real world and displaying sensor data around it, engineers and developers can better understand how their sensors interact with the environment and debug issues more effectively.</p>
+            </section>
+            
+            <section class="project-media">
+                <h2>Demo</h2>
+                <div class="media-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/uhAkVfK8lAU"
+                        allowfullscreen="allowfullscreen"
+                        mozallowfullscreen="mozallowfullscreen" 
+                        msallowfullscreen="msallowfullscreen" 
+                        oallowfullscreen="oallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen">
+                    </iframe>
+                </div>
+            </section>
+            
+            <section class="project-details">
+                <h2>Details</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h3>Technologies</h3>
+                        <p>ARKit, Unity, ROS (Robot Operating System), C#</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Role</h3>
+                        <p>Lead Developer</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Year</h3>
+                        <p>2019</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="project-content">
+                <h2>The Problem</h2>
+                <p>Vehicle sensor data is traditionally visualized using 2D interfaces or complex 3D visualization tools that run on a desktop. These methods make it difficult to intuitively understand how sensors interact with the physical world, especially for non-technical stakeholders.</p>
+                
+                <h2>The Solution</h2>
+                <p>By creating an AR application that visualizes sensor data in the real world, we can provide a more intuitive understanding of how sensors work. The app shows a 3D model of the vehicle with real-time sensor data overlaid, making it easier to:
+                </p>
+                <ul>
+                    <li>Visualize sensor detection ranges</li>
+                    <li>Observe environmental interactions</li>
+                    <li>Detect blind spots or sensor coverage issues</li>
+                    <li>Communicate sensor concepts to non-technical stakeholders</li>
+                </ul>
+                
+                <h2>Features</h2>
+                <p>The application includes:</p>
+                <ul>
+                    <li>Real-time visualization of camera, LIDAR, radar, and ultrasonic sensor data</li>
+                    <li>Dynamic scaling of the virtual vehicle</li>
+                    <li>Ability to toggle different sensors on/off</li>
+                    <li>Integration with ROS (Robot Operating System) for real-time data streaming</li>
+                    <li>Replay mode for analyzing recorded sensor data</li>
+                </ul>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="other-projects">
+                <h3>Other Projects</h3>
+                <div class="links">
+                    <a href="hootcycle.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-bicycle"></i></div>
+                        <div class="link-text">Hootcycle</div>
+                    </a>
+                    
+                    <a href="magicPutt.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-golf-ball-tee"></i></div>
+                        <div class="link-text">Magic Putt</div>
+                    </a>
+                    
+                    <a href="cloudAnchors_beerPong.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <div class="link-text">Cloud Anchors Beer Pong</div>
+                    </a>
+                    
+                    <a href="zenuity_avp.html" class="link-card">
+                        <div class="link-icon"><i class="fa-solid fa-car"></i></div>
+                        <div class="link-text">Zenuity AVP</div>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&copy; <span id="year"></span> Paul Sorenson</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
