@@ -396,6 +396,19 @@ footer {
     margin-top: 1rem;
 }
 
+.footer-link {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    transition: var(--transition);
+    margin: 0 0.5rem;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: var(--accent-color);
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 2rem 1.5rem;
