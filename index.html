@@ -30,7 +30,7 @@
         
         <main>
             <section class="about">
-                <p>I'm an engineering manager in the mobile, web and XR space. Right now I lead the Immersive Applications team at <a href="https://www.strivr.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold; text-decoration: none; transition: var(--transition);">Strivr</a> which builds iOS, VisionOS, and XR applications.</p><br/>
+                <p>I'm an engineering manager in the mobile, web and XR space. Right now I lead the Immersive Applications team at <a href="https://www.strivr.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold; text-decoration: none; transition: var(--transition);">Strivr</a> which builds iOS, Android, VisionOS, and XR applications.</p><br/>
                 <p>In my free time, I'm developing <a href="https://www.hootcycle.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold; text-decoration: none; transition: var(--transition);">Hootcycle</a>, a smart cycling tracker. </p>
             </section>
             
@@ -50,10 +50,10 @@
                     <div class="link-text">GitHub</div>
                 </a>
                 
-                <a href="https://medium.com/@paulsorenson_94349" class="link-card" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon"><i class="fa-brands fa-medium"></i></div>
+                <button class="link-card blog-button" id="blogButton">
+                    <div class="link-icon"><i class="fa-solid fa-blog"></i></div>
                     <div class="link-text">Dev Blog</div>
-                </a>
+                </button>
             </section>
         </main>
         
@@ -65,6 +65,27 @@
                 </a>
             </p>
         </footer>
+    </div>
+    
+    <!-- Blog Modal -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Dev Blog</h2>
+                <span class="close-modal" data-modal="blog">&times;</span>
+            </div>
+            <div class="modal-body">
+                <a href="https://hootcyclepaul.substack.com/" class="link-card" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon"><i class="fa-solid fa-newspaper"></i></div>
+                    <div class="link-text">Substack</div>
+                </a>
+                
+                <a href="https://medium.com/@paulsorenson_94349" class="link-card" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon"><i class="fa-brands fa-medium"></i></div>
+                    <div class="link-text">Medium</div>
+                </a>
+            </div>
+        </div>
     </div>
     
     <!-- Projects Modal -->
@@ -148,6 +169,10 @@
         const resumeBtn = document.getElementById('resumeButton');
         const resumeClose = resumeModal.querySelector('.close-modal');
         
+        const blogModal = document.getElementById('blogModal');
+        const blogBtn = document.getElementById('blogButton');
+        const blogClose = blogModal.querySelector('.close-modal');
+        
         // Check for hash parameter on page load
         function checkHash() {
             if (window.location.hash === '#projects') {
@@ -155,6 +180,9 @@
                 document.body.style.overflow = 'hidden';
             } else if (window.location.hash === '#resume') {
                 resumeModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else if (window.location.hash === '#blog') {
+                blogModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
             }
         }
@@ -191,6 +219,19 @@
             window.location.hash = '';
         }
         
+        // Blog modal
+        blogBtn.onclick = function() {
+            blogModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            window.location.hash = 'blog';
+        }
+        
+        blogClose.onclick = function() {
+            blogModal.classList.remove('show');
+            document.body.style.overflow = '';
+            window.location.hash = '';
+        }
+        
         // Close modals when clicking outside
         window.onclick = function(event) {
             if (event.target == xrModal) {
@@ -200,6 +241,11 @@
             }
             if (event.target == resumeModal) {
                 resumeModal.classList.remove('show');
+                document.body.style.overflow = '';
+                window.location.hash = '';
+            }
+            if (event.target == blogModal) {
+                blogModal.classList.remove('show');
                 document.body.style.overflow = '';
                 window.location.hash = '';
             }
