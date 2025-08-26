@@ -30,7 +30,7 @@
         
         <main>
             <section class="about">
-                <p>I'm an engineering manager in the mobile, web and XR space. Right now I lead the Immersive Applications team at <a href="https://www.strivr.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold; text-decoration: none; transition: var(--transition);">Strivr</a> which builds iOS, Android, VisionOS, and XR applications.</p><br/>
+                <p>I'm an engineering manager, leading the Immersive Applications team at <a href="https://www.strivr.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold; text-decoration: none; transition: var(--transition);">Strivr</a>. My team owns the web and native applications for Strivr's platform.</p><br/>
                 <p>In my free time, I'm developing <a href="https://www.hootcycle.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold; text-decoration: none; transition: var(--transition);">Hootcycle</a>, a smart cycling tracker. </p>
             </section>
             
@@ -40,9 +40,14 @@
                     <div class="link-text">Resume</div>
                 </button>
                 
-                <button class="link-card xr-button" id="xrButton">
+                <button class="link-card xr-button" id="professionalProjectsButton">
+                    <div class="link-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="link-text">Professional Projects</div>
+                </button>
+                
+                <button class="link-card xr-button" id="personalProjectsButton">
                     <div class="link-icon"><i class="fa-solid fa-code-branch"></i></div>
-                    <div class="link-text">Projects</div>
+                    <div class="link-text">Personal Projects</div>
                 </button>
                 
                 <a href="https://github.com/paulrus123" class="link-card" target="_blank" rel="noopener noreferrer">
@@ -88,39 +93,63 @@
         </div>
     </div>
     
-    <!-- Projects Modal -->
-    <div id="xrModal" class="modal">
+    <!-- Professional Projects Modal -->
+    <div id="professionalProjectsModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Projects</h2>
-                <span class="close-modal" data-modal="xr">&times;</span>
+                <h2>Professional Projects</h2>
+                <span class="close-modal" data-modal="professional">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="modal-intro">Here are a few professional projects that my team and I have published.</p>
+                <a href="https://apps.apple.com/us/app/strivr-workwise/id6578461445" class="link-card" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon"><i class="fa-solid fa-video"></i></div>
+                    <div class="link-text">Workwise - Strivr's native app for capturing first-person process videos. Built for Apple Vision Pro and Android/Meta Quest.</div>
+                </a>
+                <a href="https://www.meta.com/experiences/strivr/5367911833336107/" class="link-card" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                    <div class="link-text">Player - Strivr's engine for playing training content. Content delivery is achieved with a custom Android library utilizing WorkManager.</div>
+                </a>
+                <a href="https://www.meta.com/experiences/strivr/5367911833336107/" class="link-card" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                    <div class="link-text">
+                        Player Web - A WebXR port of Player using Workbox for browser-based asset caching and delivery in place of the native Android functionality.
+                    </div>
+                </a>
+                <a href="xr/zenuity_avp.html" class="link-card" target="_blank" rel="noopener noreferrer">
+                    <div class="link-icon"><i class="fa-solid fa-car"></i></div>
+                    <div class="link-text">
+                        Automated Valet Parking - Zenuity's functional prototype for automated valet parking.
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Personal Projects Modal -->
+    <div id="personalProjectsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Personal Projects</h2>
+                <span class="close-modal" data-modal="personal">&times;</span>
             </div>
             <div class="modal-body">
                 <p class="modal-intro">Here are some of my personal projects. Check out my <a href="https://github.com/paulrus123" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); font-weight: bold; text-decoration: none; transition: var(--transition);">GitHub</a> for source code.</p>
-                
                 <a href="xr/hootcycle.html" class="link-card">
                     <div class="link-icon"><i class="fa-solid fa-bicycle"></i></div>
                     <div class="link-text">Hootcycle</div>
                 </a>
-                
                 <a href="xr/cloudAnchors_beerPong.html" class="link-card">
                     <div class="link-icon"><i class="fa-solid fa-cloud"></i></div>
                     <div class="link-text">Cloud Anchors Beer Pong</div>
                 </a>
-                
                 <a href="xr/magicPutt.html" class="link-card">
                     <div class="link-icon"><i class="fa-solid fa-golf-ball-tee"></i></div>
                     <div class="link-text">Magic Putt</div>
                 </a>
-                
                 <a href="xr/ar_sensor_visualization.html" class="link-card">
                     <div class="link-icon"><i class="fa-solid fa-chart-simple"></i></div>
                     <div class="link-text">AR Sensor Visualization</div>
-                </a>
-                
-                <a href="xr/zenuity_avp.html" class="link-card">
-                    <div class="link-icon"><i class="fa-solid fa-car"></i></div>
-                    <div class="link-text">Zenuity AVP</div>
                 </a>
             </div>
         </div>
@@ -161,9 +190,6 @@
         }
         
         // Modal functionality
-        const xrModal = document.getElementById('xrModal');
-        const xrBtn = document.getElementById('xrButton');
-        const xrClose = xrModal.querySelector('.close-modal');
         
         const resumeModal = document.getElementById('resumeModal');
         const resumeBtn = document.getElementById('resumeButton');
@@ -173,10 +199,21 @@
         const blogBtn = document.getElementById('blogButton');
         const blogClose = blogModal.querySelector('.close-modal');
         
+        const professionalProjectsModal = document.getElementById('professionalProjectsModal');
+        const professionalProjectsBtn = document.getElementById('professionalProjectsButton'); // New button for professional projects
+        const professionalProjectsClose = professionalProjectsModal.querySelector('.close-modal');
+
+        const personalProjectsModal = document.getElementById('personalProjectsModal');
+        const personalProjectsBtn = document.getElementById('personalProjectsButton'); // New button for personal projects
+        const personalProjectsClose = personalProjectsModal.querySelector('.close-modal');
+        
         // Check for hash parameter on page load
         function checkHash() {
-            if (window.location.hash === '#projects') {
-                xrModal.classList.add('show');
+            if (window.location.hash === '#professional') {
+                professionalProjectsModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else if (window.location.hash === '#personal') {
+                personalProjectsModal.classList.add('show');
                 document.body.style.overflow = 'hidden';
             } else if (window.location.hash === '#resume') {
                 resumeModal.classList.add('show');
@@ -193,18 +230,7 @@
         // Also run when hash changes (for browser back/forward buttons)
         window.addEventListener('hashchange', checkHash);
         
-        // XR modal
-        xrBtn.onclick = function() {
-            xrModal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-            window.location.hash = 'projects';
-        }
-        
-        xrClose.onclick = function() {
-            xrModal.classList.remove('show');
-            document.body.style.overflow = '';
-            window.location.hash = '';
-        }
+
         
         // Resume modal
         resumeBtn.onclick = function() {
@@ -231,14 +257,35 @@
             document.body.style.overflow = '';
             window.location.hash = '';
         }
+
+        // Professional Projects modal
+        professionalProjectsBtn.onclick = function() {
+            professionalProjectsModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            window.location.hash = 'professional';
+        }
+
+        professionalProjectsClose.onclick = function() {
+            professionalProjectsModal.classList.remove('show');
+            document.body.style.overflow = '';
+            window.location.hash = '';
+        }
+
+        // Personal Projects modal
+        personalProjectsBtn.onclick = function() {
+            personalProjectsModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            window.location.hash = 'personal';
+        }
+
+        personalProjectsClose.onclick = function() {
+            personalProjectsModal.classList.remove('show');
+            document.body.style.overflow = '';
+            window.location.hash = '';
+        }
         
         // Close modals when clicking outside
         window.onclick = function(event) {
-            if (event.target == xrModal) {
-                xrModal.classList.remove('show');
-                document.body.style.overflow = '';
-                window.location.hash = '';
-            }
             if (event.target == resumeModal) {
                 resumeModal.classList.remove('show');
                 document.body.style.overflow = '';
@@ -246,6 +293,16 @@
             }
             if (event.target == blogModal) {
                 blogModal.classList.remove('show');
+                document.body.style.overflow = '';
+                window.location.hash = '';
+            }
+            if (event.target == professionalProjectsModal) {
+                professionalProjectsModal.classList.remove('show');
+                document.body.style.overflow = '';
+                window.location.hash = '';
+            }
+            if (event.target == personalProjectsModal) {
+                personalProjectsModal.classList.remove('show');
                 document.body.style.overflow = '';
                 window.location.hash = '';
             }
